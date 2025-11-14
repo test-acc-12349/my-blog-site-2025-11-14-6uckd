@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn SEO Tips & Tricks with expert guides, quick tips, and professional advice to rank higher and drive more traffic to your website.">
+    <meta name="keywords" content="SEO, Search Engine Optimization, SEO Tips, SEO Guides, Digital Marketing">
+    <meta name="author" content="My Blog Site">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="My Blog Site - Learn SEO Tips & Tricks">
+    <meta property="og:description" content="Master SEO with comprehensive guides, expert advice, and actionable tips to improve your search rankings.">
+    <meta property="og:type" content="website">
+    <title>My Blog Site - Learn SEO Tips & Tricks | Expert SEO Guides & Quick Tips</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        .btn-primary {
+            @apply bg-[#5B4BFF] text-white rounded-full px-8 py-3 font-semibold transition-all duration-300 ease-out hover:scale-105 hover:shadow-xl hover:brightness-110 inline-flex items-center gap-2 cursor-pointer;
+        }
+        
+        .btn-secondary {
+            @apply bg-white text-[#5B4BFF] border-2 border-[#5B4BFF] rounded-full px-8 py-3 font-semibold transition-all duration-300 ease-out hover:scale-105 hover:shadow-xl hover:bg-[#EEF0FF] inline-flex items-center gap-2 cursor-pointer;
+        }
+        
+        .card-hover {
+            @apply transition-all duration-300 ease-out hover:scale-105 hover:shadow-xl;
+        }
+        
+        .section-gradient {
+            background: linear-gradient(135deg, #5B4BFF 0%, #7B68EE 100%);
+        }
+        
+        .text-primary {
+            color: #5B4BFF;
+        }
+        
+        .bg-secondary {
+            background-color: #EEF0FF;
+        }
+        
+        .text-accent {
+            color: #00E5A8;
+        }
+        
+        .accent-highlight {
+            background-color: #00E5A8;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, rgba(91, 75, 255, 0.1) 0%, rgba(238, 240, 255, 0.5) 100%);
+        }
+        
+        .feature-card {
+            @apply rounded-2xl bg-white p-8 shadow-lg transition-all duration-300 ease-out hover:scale-105 hover:shadow-xl;
+        }
+        
+        .faq-question {
+            @apply cursor-pointer transition-all duration-300 ease-out;
+        }
+        
+        .faq-icon {
+            @apply transition-transform duration-300 ease-out;
+        }
+        
+        .header-sticky {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            backdrop-filter: blur(10px);
+            background-color: rgba(255, 255, 255, 0.95);
+        }
+        
+        .mobile-menu {
+            @apply absolute top-full left-0 right-0 bg-white shadow-2xl rounded-b-2xl overflow-hidden;
+        }
+        
+        .mobile-menu a {
+            @apply block px-8 py-4 text-gray-700 hover:text-[#5B4BFF] hover:bg-[#EEF0FF] transition-all duration-300;
+        }
+        
+        .testimonial-card {
+            @apply bg-white rounded-2xl p-8 shadow-lg transition-all duration-300 ease-out hover:scale-105 hover:shadow-xl;
+        }
+        
+        .star-rating {
+            @apply flex gap-1;
+        }
+        
+        .star {
+            color: #FFD700;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .fade-in-up {
+            animation: fadeInUp 0.6s ease-out;
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-900">
+    <!-- Header Navigation -->
+    <header class="header-sticky">
+        <nav class="max-w-7xl mx-auto px-8 md:px-16 py-6 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full section-gradient flex items-center justify-center text-white font-bold text-lg">
+                    <i class="fas fa-blog"></i>
+                </div>
+                <span class="text-2xl font-bold text-primary hidden sm:inline">My Blog Site</span>
+            </div>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center gap-8">
+                <a href="#features" class="text-gray-700 font-medium hover:text-primary transition-colors duration-300">Features</a>
+                <a href="#benefits" class="text-gray-700 font-medium hover:text-primary transition-colors duration-300">Benefits</a>
+                <a href="#testimonials" class="text-gray-700 font-medium hover:text-primary transition-colors duration-300">Testimonials</a>
+                <a href="#about" class="text-gray-700 font-medium hover:text-primary transition-colors duration-300">About</a>
+                <a href="https://test.com" class="btn-primary">
+                    Get Started
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button class="mobile-menu-button md:hidden text-2xl text-primary hover:text-[#7B68EE] transition-colors duration-300">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <!-- Mobile Menu -->
+            <div class="mobile-menu hidden md:hidden">
+                <a href="#features" class="block px-8 py-4 text-gray-700 hover:text-primary hover:bg-secondary transition-all duration-300 font-medium">Features</a>
+                <a href="#benefits" class="block px-8 py-4 text-gray-700 hover:text-primary hover:bg-secondary transition-all duration-300 font-medium">Benefits</a>
+                <a href="#testimonials" class="block px-8 py-4 text-gray-700 hover:text-primary hover:bg-secondary transition-all duration-300 font-medium">Testimonials</a>
+                <a href="#about" class="block px-8 py-4 text-gray-700 hover:text-primary hover:bg-secondary transition-all duration-300 font-medium">About</a>
+                <a href="https://test.com" class="block px-8 py-4 mx-4 mb-4 text-center bg-primary text-white rounded-full font-semibold hover:brightness-110 transition-all duration-300">Get Started</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient py-32 md:py-40 px-8 md:px-16">
+        <div class="max-w-7xl mx-auto text-center fade-in-up">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-6 leading-tight tracking-tight">
+                Learn SEO Tips & Tricks
+            </h1>
+            <p class="text-lg md:text-xl text-gray-700 mb-8 max-w-3xl mx-auto leading-relaxed font-medium">
+                Master the art of search engine optimization with our comprehensive guides, expert advice, and actionable strategies designed to help your website rank higher and attract more qualified traffic.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+                <a href="https://test.com" class="btn-primary">
+                    <i class="fas fa-rocket"></i>
+                    Start Learning Now
+                </a>
+                <a href="#features" class="btn-secondary">
+                    <i class="fas fa-arrow-down"></i>
+                    Explore Features
+                </a>
+            </div>
+            <div class="flex flex-col sm:flex-row gap-8 justify-center items-center text-center">
+                <div class="flex items-center gap-3">
+                    <div class="w-12 h-12 rounded-full bg-accent-highlight flex items-center justify-center">
+                        <i class="fas fa-chart-line text-white"></i>
+                    </div>
+                    <div>
+                        <p class="font-bold text-lg text-gray-900">10K+</p>
+                        <p class="text-sm text-gray-600">Students Learning</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-3">
+                    <div class="w-12 h-12 rounded-full bg-accent-highlight flex items-center justify-center">
+                        <i class="fas fa-star text-white"></i>
+                    </div>
+                    <div>
+                        <p class="font-bold text-lg text-gray-900">4.9/5</p>
+                        <p class="text-sm text-gray-600">Average Rating</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-3">
+                    <div class="w-12 h-12 rounded-full bg-accent-highlight flex items-center justify-center">
+                        <i class="fas fa-book text-white"></i>
+                    </div>
+                    <div>
+                        <p class="font-bold text-lg text-gray-900">100+</p>
+                        <p class="text-sm text-gray-600">Expert Guides</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20 md:py-32 px-8 md:px-16 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16 md:mb-24">
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4 tracking-tight">
+                    Comprehensive SEO Resources
+                </h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
+                    Everything you need to understand and master search engine optimization, from foundational concepts to advanced tactics
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
+                <!-- Feature 1: SEO Guides -->
+                <div class="feature-card">
+                    <div class="w-16 h-16 rounded-2xl bg-secondary flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3.042.525A9.006 9.006 0 002.25 9m12-7.5h.008v.008h-.008V6.042zm6 0h.008v.008h-.008V6.042zm0 9.958h.008v.008h-.008V15.999zm0 9.962h.008v.008h-.008V25.999z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">SEO Guides</h3>
+                    <p class="text-gray-700 leading-relaxed mb-6">
+                        In-depth, step-by-step guides covering every aspect of SEO optimization. From keyword research and on-page optimization to link building and technical SEO, our comprehensive guides break down complex concepts into actionable strategies you can implement immediately.
+                    </p>
+                    <ul class="space-y-3">
+                        <li class="flex items-center gap-3 text-gray-700">
+                            <svg class="w-5 h-5 text-accent-highlight" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                            </svg>
+                            <span>Keyword Research Strategies</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-gray-700">
+                            <svg class="w-5 h-5 text-accent-highlight" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                            </svg>
+                            <span>On-Page Optimization</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-gray-700">
+                            <svg class="w-5 h-5 text-accent-highlight" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                            </svg>
+                            <span>Link Building Tactics</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Feature 2: Quick Tips -->
+                <div class="feature-card">
+                    <div class="w-16 h-16 rounded-2xl bg-secondary flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5.36 4.24l-.707-.707M5.95 5.95l.707.707" />
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Quick Tips</h3>
+                    <p class="text-gray-700 leading-relaxed mb-6">
+                        Fast, actionable tips and tricks you can apply right now to improve your SEO performance. These bite-sized recommendations cover common mistakes, quick wins, and optimization hacks that deliver results without requiring extensive implementation time or technical knowledge.
+                    </p>
+                    <ul class="space-y-3">
+                        <li class="flex items-center gap-3 text-gray-700">
+                            <svg class="w-5 h-5 text-accent-highlight" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                            </svg>
+                            <span>Meta Tag Optimization</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-gray-700">
+                            <svg class="w-5 h-5 text-accent-highlight" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                            </svg>
+                            <span>Content Structure Tips</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-gray-700">
+                            <svg class="w-5 h-5 text-accent-highlight" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                            </svg>
+                            <span>Mobile Optimization Hacks</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Feature 3: Expert Advice -->
+                <div class="feature-card">
+                    <div class="w-16 h-16 rounded-2xl bg-secondary flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Expert Advice</h3>
+                    <p class="text-gray-700 leading-relaxed mb-6">
+                        Insights and recommendations from industry-leading SEO professionals with years of experience. Our expert contributors share their proven methodologies, case studies, and real-world examples that showcase what actually works in today's competitive search landscape.
+                    </p>
+                    <ul class="space-y-3">
+                        <li class="flex items-center gap-3 text-gray-700">
+                            <svg class="w-5 h-5 text-accent-highlight" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                            </svg>
+                            <span>Algorithm Update Analysis</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-gray-700">
+                            <svg class="w-5 h-5 text-accent-highlight" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                            </svg>
+                            <span>Industry Best Practices</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-gray-700">
+                            <svg class="w-5 h-5 text-accent-highlight" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                            </svg>
+                            <span>Case Studies & Results</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="benefits" class="py-20 md:py-32 px-8 md:px-16 bg-secondary">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16 md:mb-24">
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4 tracking-tight">
+                    Tangible Results You'll Achieve
+                </h2>
+                <p class="text-lg text-gray-700 max-w-2xl mx-auto leading-relaxed">
+                    Discover how our SEO resources help you achieve measurable improvements in search visibility and organic traffic
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
+                <!-- Benefit 1: Rank Higher -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg transition-all duration-300 ease-out hover:scale-105 hover:shadow-xl">
+                    <div class="w-20 h-20 rounded-2xl section-gradient flex items-center justify-center mb-6 mx-auto">
+                        <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-center text-gray-900 mb-4">Rank Higher</h3>
+                    <p class="text-gray-700 leading-relaxed text-center mb-6">
+                        Implement proven optimization techniques to improve your search rankings and dominate the first page of search results for your target keywords, dramatically increasing your visibility to potential customers.
+                    </p>
+                    <div class="bg-secondary rounded-lg p-4 text-center">
+                        <p class="text-sm text-gray-600">Average ranking improvement</p>
+                        <p class="text-3xl font-bold text-primary">+8 Positions</p>
+                    </div>
+                </div>
+
+                <!-- Benefit 2: Drive Traffic -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg transition-all duration-300 ease-out hover:scale-105 hover:shadow-xl">
+                    <div class="w-20 h-20 rounded-2xl section-gradient flex items-center justify-center mb-6 mx-auto">
+                        <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-center text-gray-900 mb-4">Drive Traffic</h3>
+                    <p class="text-gray-700 leading-relaxed text-center mb-6">
+                        Attract more qualified organic visitors to your website through strategic SEO optimization, resulting in increased lead generation, conversions, and revenue growth without relying on expensive paid advertising.
+                    </p>
+                    <div class="bg-secondary rounded-lg p-4 text-center">
+                        <p class="text-sm text-gray-600">Average traffic increase</p>
+                        <p class="text-3xl font-bold text-primary">+150%</p>
+                    </div>
+                </div>
+
+                <!-- Benefit 3: Learn Fast -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg transition-all duration-300 ease-out hover:scale-105 hover:shadow-xl">
+                    <div class="w-20 h-20 rounded-2xl section-gradient flex items-center justify-center mb-6 mx-auto">
+                        <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-center text-gray-900 mb-4">Learn Fast</h3>
+                    <p class="text-gray-700 leading-relaxed text-center mb-6">
+                        Accelerate your SEO knowledge with our well-organized, easy-to-understand content. From beginners to advanced practitioners, our resources are structured to help you quickly grasp concepts and apply them to your specific situation.
+                    </p>
+                    <div class="bg-secondary rounded-lg p-4 text-center">
+                        <p class="text-sm text-gray-600">Average learning time</p>
+                        <p class="text-3xl font-bold text-primary">50% Faster</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-16 md:mt-24 text-center">
+                <p class="text-lg text-gray-700 mb-8">Ready to transform your SEO strategy?</p>
+                <a href="https://test.com" class="btn-primary text-lg px-10 py-4">
+                    <i class="fas fa-play-circle"></i>
+                    Start Your SEO Journey Today
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-20 md:py-32 px-8 md:px-16 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16 md:mb-24">
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4 tracking-tight">
+                    Loved by SEO Professionals
+                </h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
+                    See what industry experts and business owners are saying about our comprehensive SEO resources
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 md:gap-12">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card">
+                    <div class="flex items-center gap-1 mb-4">
+                        <i class="fas fa-star star"></i>
+                        <i class="fas fa-star star"></i>
+                        <i class="fas fa-star star"></i>
+                        <i class="fas fa-star star"></i>
+                        <i class="fas fa-star star"></i>
+                    </div>
+                    <p class="text-gray-700 leading-relaxed mb-6 text-lg">
+                        "This blog site completely transformed how I approach SEO. The guides are incredibly detailed and practical. Within three months of implementing the strategies I learned, my website jumped from page 3 to the first page for my main keywords. The quick tips section alone has saved me hours of research!"
+                    </p>
+                    <div class="flex items-center gap-4 pt-4 border-t border-gray-200">
+                        <div class="w-14 h-14 rounded-full bg-gradient-to-br from-[#5B4BFF] to-[#7B68EE] flex items-center justify-center text-white font-bold text-lg">
+                            JM
+                        </div>
+                        <div>
+                            <p class="font-bold text-gray-900">Jessica Martinez</p>
+                            <p class="text-sm text-gray-600">Digital Marketing Manager, TechStart Inc.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card">
+                    <div class="flex items-center gap-1 mb-4">
+                        <i class="fas fa-star star"></i>
+                        <i class="fas fa-star star"></i>
+                        <i class="fas fa-star star"></i>
+                        <i class="fas fa-star star"></i>
+                        <i class="fas fa-star star"></i>
+                    </div>
+                    <p class="text-gray-700 leading-relaxed mb-6 text-lg">
+                        "As a small business owner with limited marketing budget, I was skeptical about DIY SEO. This resource proved me wrong. The expert advice sections are written by people who actually know what they're talking about. My organic traffic has increased by 200% and I'm finally getting quality leads without spending a fortune on ads."
+                    </p>
+                    <div class="flex items-center gap-4 pt-4 border-t border-gray-200">
+                        <div class="w-14 h-14 rounded-full bg-gradient-to-br from-[#00E5A8] to-[#00C896] flex items-center justify-center text-white font-bold text-lg">
+                            RC
+                        </div>
+                        <div>
+                            <p class="font-bold text-gray-900">Robert Chen</p>
+                            <p class="text-sm text-gray-600">Founder, Chen's Consulting</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card">
+                    <div class="flex items-center gap-1 mb-4">
+                        <i class="fas fa-star star"></i>
+                        <i class="fas fa-star star"></i>
+                        <i class="fas fa-star star"></i>
+                        <i class="fas fa-star star"></i>
+                        <i class="fas fa-star star"></i>
+                    </div>
+                    <p class="text-gray-700 leading-relaxed mb-6 text-lg">
+                        "The case studies and real-world examples are invaluable. I've been in the SEO industry for 8 years and I'm still learning new perspectives from this blog. The algorithm update analysis keeps me current with the latest changes, and the technical SEO guides are more comprehensive than most paid courses I've taken."
+                    </p>
+                    <div class="flex items-center gap-4 pt-4 border-t border-gray-200">
+                        <div class="w-14 h-14 rounded-full bg-gradient-to-br from-[#7B68EE] to-[#5B4BFF] flex items-center justify-center text-white font-bold text-lg">
+                            SG
+                        </div>
+                        <div>
+                            <p class="font-bold text-gray-900">Sarah Goldman</p>
+                            <p class="text-sm text-gray-600">SEO Specialist, Digital Agency Pro</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 4 -->
+                <div class="testimonial-card">
+                    <div class="flex items-center gap-1 mb-4">
+                        <i class="fas fa-star star"></i>
+                        <i class="fas fa-star star"></i>
+                        <i class="fas fa-star star"></i>
+                        <i class="fas fa-star star"></i>
+                        <i class="fas fa-star star"></i>
+                    </div>
+                    <p class="text-gray-700 leading-relaxed mb-6 text-lg">
+                        "I recommended this site to my entire team and it's become our go-to resource for staying updated on SEO best practices. The content is well-organized, easy to navigate, and the quick tips are perfect for our daily optimization work. Our site's authority has improved significantly thanks to implementing the strategies covered here."
+                    </p>
+                    <div class="flex items-center gap-4 pt-4 border-t border-gray-200">
+                        <div class="w-14 h-14 rounded-full bg-gradient-to-br from-[#FF6B6B] to-[#FF8787] flex items-center justify-center text-white font-bold text-lg">
+                            MP
+                        </div>
+                        <div>
+                            <p class="font-bold text-gray-900">Michael Patterson</p>
+                            <p class="text-sm text-gray-600">Head of SEO, E-commerce Solutions Ltd.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="py-20 md:py-32 px-8 md:px-16 bg-secondary">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-12 text-center tracking-tight">
+                About My Blog Site
+            </h2>
+
+            <div class="space-y-8 text-lg leading-relaxed text-gray-700">
+                <p>
+                    My Blog Site was founded in 2018 by a group of experienced SEO professionals who recognized a critical gap in the market: most SEO resources were either overly technical for beginners or too superficial for experts. We set out to create a comprehensive, accessible platform that would serve the entire spectrum of SEO learners and practitioners. What started as a passion project has grown into a trusted resource for over 10,000 monthly visitors, from freelancers and small business owners to enterprise-level digital marketing teams. Our commitment has always been to provide honest, practical, and up-to-date information that actually works in the real world.
+                </p>
+
+                <p>
+                    Our mission is to democratize SEO knowledge and empower businesses of all sizes to achieve sustainable organic growth through search engine optimization. We believe that success in SEO doesn't require expensive consultants or proprietary tools—it requires understanding, strategy, and consistent execution. Every article, guide, and resource we publish is created with the belief that quality education should be accessible, actionable, and results-driven. We're dedicated to staying ahead of algorithm changes, documenting emerging trends, and sharing the strategies that actually move the needle for our readers. Our core values center on transparency, expertise, and a genuine commitment to helping our community succeed in the ever-evolving landscape of search engine optimization.
+                </p>
+            </div>
+
+            <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="text-center">
+                    <div class="text-4xl font-bold text-primary mb-2">10K+</div>
+                    <p class="text-gray-600">Monthly Visitors</p>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl font-bold text-primary mb-2">100+</div>
+                    <p class="text-gray-600">Comprehensive Guides</p>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl font-bold text-primary mb-2">15+</div>
+                    <p class="text-gray-600">Expert Contributors</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="relative py-20 md:py-32 px-8 md:px-16 overflow-hidden">
+        <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&h=400&fit=crop'); opacity: 0.2;"></div>
+        <div class="absolute inset-0 section-gradient opacity-90"></div>
+        
+        <div class="max-w-4xl mx-auto relative z-10 text-center text-white">
+            <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 tracking-tight">
+                Ready to Master SEO?
+            </h2>
+            <p class="text-lg md:text-xl mb-8 leading-relaxed opacity-95">
+                Join thousands of marketers, business owners, and SEO professionals who are already using our resources to rank higher, drive more traffic, and achieve their business goals.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <a href="https://test.com" class="bg-white text-primary rounded-full px-8 py-3 font-semibold transition-all duration-300 ease-out hover:scale-105 hover:shadow-xl inline-flex items-center gap-2">
+                    <i class="fas fa-rocket"></i>
+                    Start Learning Now
+                </a>
+                <a href="mailto:admin@test.com" class="border-2 border-white text-white rounded-full px-8 py-3 font-semibold transition-all duration-300 ease-out hover:scale-105 hover:bg-white hover:text-primary inline-flex items-center gap-2">
+                    <i class="fas fa-envelope"></i>
+                    Contact Us
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    
+    <!-- Contact Form Section - Centered Card Layout -->
+    <section id="contact" class="py-20 bg-gradient-to-b from-white to-gray-50">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Get in Touch</h2>
+          <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+            Have questions? We'd love to hear from you. Send us a message and we'll respond as soon as possible.
+          </p>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-xl p-8 md:p-12">
+          <form action="https://api.web3forms.com/submit" method="POST" class="space-y-6">
+            <input type="hidden" name="access_key" value="0b917c63-84c9-466a-b417-2cad89801d7f">
+            <input type="hidden" name="redirect" value="false">
+            <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+            <div>
+              <label for="name" class="block text-sm font-semibold text-gray-700 mb-2">
+                Full Name <span class="text-red-500">*</span>
+              </label>
+              <input 
+                type="text" 
+                name="name" 
+                id="name" 
+                required 
+                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 outline-none"
+                placeholder="John Doe"
+              >
+            </div>
+
+            <div>
+              <label for="email" class="block text-sm font-semibold text-gray-700 mb-2">
+                Email Address <span class="text-red-500">*</span>
+              </label>
+              <input 
+                type="email" 
+                name="email" 
+                id="email" 
+                required 
+                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 outline-none"
+                placeholder="john@example.com"
+              >
+            </div>
+
+            <div>
+              <label for="phone" class="block text-sm font-semibold text-gray-700 mb-2">
+                Phone Number
+              </label>
+              <input 
+                type="tel" 
+                name="phone" 
+                id="phone" 
+                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 outline-none"
+                placeholder="+1 (555) 000-0000"
+              >
+            </div>
+
+            <div>
+              <label for="message" class="block text-sm font-semibold text-gray-700 mb-2">
+                Message <span class="text-red-500">*</span>
+              </label>
+              <textarea 
+                name="message" 
+                id="message" 
+                required 
+                rows="5" 
+                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 outline-none resize-none"
+                placeholder="Tell us about your project or inquiry..."
+              ></textarea>
+            </div>
+
+            <div class="pt-4">
+              <button 
+                type="submit" 
+                class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-200 transform hover:scale-[1.02] active:scale-[0.98] shadow-lg hover:shadow-xl"
+              >
+                Send Message
+              </button>
+            </div>
+
+            <div id="form-result" class="hidden mt-4 p-4 rounded-lg text-center font-medium"></div>
+          </form>
+        </div>
+
+        <div class="mt-12 text-center">
+          <p class="text-gray-600">
+            Or email us directly at <a href="mailto:hello@example.com" class="text-blue-600 hover:text-blue-700 font-semibold">hello@example.com</a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      (function() {
+        const form = document.querySelector('form[action*="web3forms"]');
+        const resultDiv = document.getElementById('form-result');
+        
+        if (!form) return;
+        
+        form.addEventListener('submit', async function(e) {
+          e.preventDefault();
+          
+          const formData = new FormData(form);
+          const submitButton = form.querySelector('button[type="submit"]');
+          const originalButtonText = submitButton.textContent;
+          
+          submitButton.disabled = true;
+          submitButton.textContent = 'Sending...';
+          resultDiv.classList.add('hidden');
+          
+          try {
+            const response = await fetch('https://api.web3forms.com/submit', {
+              method: 'POST',
+              body: formData
+            });
+            
+            const data = await response.json();
+            
+            if (response.ok && data.success) {
+              resultDiv.className = 'block mt-4 p-4 rounded-lg text-center font-medium bg-green-50 text-green-800 border border-green-200';
+              resultDiv.textContent = 'Thank you! Your message has been sent successfully. We\'ll get back to you soon.';
+              form.reset();
+            } else {
+              resultDiv.className = 'block mt-4 p-4 rounded-lg text-center font-medium bg-red-50 text-red-800 border border-red-200';
+              resultDiv.textContent = data.message || 'Something went wrong. Please try again.';
+            }
+          } catch (error) {
+            resultDiv.className = 'block mt-4 p-4 rounded-lg text-center font-medium bg-red-50 text-red-800 border border-red-200';
+            resultDiv.textContent = 'Network error. Please check your connection and try again.';
+          } finally {
+            submitButton.disabled = false;
+            submitButton.textContent = originalButtonText;
+          }
+        });
+      })();
+    </script>
+  <footer class="bg-gray-900 text-gray-300 py-16 px-8 md:px-16">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <!-- Column 1: Brand -->
+                <div>
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 rounded-full section-gradient flex items-center justify-center text-white font-bold">
+                            <i class="fas fa-blog"></i>
+                        </div>
+                        <span class="text-xl font-bold text-white">My Blog Site</span>
+                    </div>
+                    <p class="text-gray-400 leading-relaxed mb-6">
+                        Your trusted resource for comprehensive SEO guides, expert advice, and actionable strategies to improve your search rankings and drive organic traffic.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:text-primary hover:bg-gray-700 transition-all duration-300">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:text-primary hover:bg-gray-700 transition-all duration-300">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:text-primary hover:bg-gray-700 transition-all duration-300">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:text-primary hover:bg-gray-700 transition-all duration-300">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Column 2: Resources -->
+                <div>
+                    <h3 class="text-lg font-bold text-white mb-6">Resources</h3>
+                    <ul class="space-y-4">
+                        <li><a href="#features" class="text-gray-400 hover:text-primary transition-colors duration-300">SEO Guides</a></li>
+                        <li><a href="#features" class="text-gray-400 hover:text-primary transition-colors duration-300">Quick Tips</a></li>
+                        <li><a href="#features" class="text-gray-400 hover:text-primary transition-colors duration-300">Expert Advice</a></li>
+                        <li><a href="blog.html" class="text-gray-400 hover:text-primary transition-colors duration-300">Blog</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors duration-300">Webinars</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Company -->
+                <div>
+                    <h3 class="text-lg font-bold text-white mb-6">Company</h3>
+                    <ul class="space-y-4">
+                        <li><a href="#about" class="text-gray-400 hover:text-primary transition-colors duration-300">About Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors duration-300">Our Team</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors duration-300">Careers</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors duration-300">Press</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors duration-300">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Legal -->
+                <div>
+                    <h3 class="text-lg font-bold text-white mb-6">Legal</h3>
+                    <ul class="space-y-4">
+                        <li><a href="privacy.html" class="text-gray-400 hover:text-primary transition-colors duration-300">Privacy Policy</a></li>
+                        <li><a href="terms.html" class="text-gray-400 hover:text-primary transition-colors duration-300">Terms of Service</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors duration-300">Cookie Policy</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors duration-300">Disclaimer</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors duration-300">Sitemap</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Divider -->
+            <div class="border-t border-gray-800 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                    <p class="text-gray-400 text-sm">
+                        &copy; 2025 My Blog Site. All rights reserved. | Helping businesses master SEO and achieve sustainable organic growth.
+                    </p>
+                    <div class="flex gap-6">
+                        <a href="privacy.html" class="text-gray-400 hover:text-primary text-sm transition-colors duration-300">Privacy</a>
+                        <a href="terms.html" class="text-gray-400 hover:text-primary text-sm transition-colors duration-300">Terms</a>
+                        <a href="blog.html" class="text-gray-400 hover:text-primary text-sm transition-colors duration-300">Blog</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile Menu Toggle
+            const mobileMenuButton = document.querySelector('header nav .mobile-menu-button');
+            const mobileMenu = document.querySelector('header nav .mobile-menu');
+            
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                    const icon = mobileMenuButton.querySelector('i');
+                    if (icon) {
+                        icon.classList.toggle('fa-bars');
+                        icon.classList.toggle('fa-times');
+                    }
+                });
+
+                const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+                mobileMenuLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        mobileMenu.classList.add('hidden');
+                        const icon = mobileMenuButton.querySelector('i');
+                        if (icon) {
+                            icon.classList.remove('fa-times');
+                            icon.classList.add('fa-bars');
+                        }
+                    });
+                });
+            }
+
+            // FAQ Accordion Toggle (if FAQ section exists)
+            const faqItems = document.querySelectorAll('.faq-item');
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                if (question) {
+                    question.addEventListener('click', () => {
+                        const answer = item.querySelector('.faq-answer');
+                        const isOpen = !answer.classList.contains('hidden');
+                        
+                        // Close all other FAQ items
+                        faqItems.forEach(otherItem => {
+                            if (otherItem !== item) {
+                                otherItem.querySelector('.faq-answer')?.classList.add('hidden');
+                                otherItem.querySelector('.faq-icon')?.classList.remove('rotate-180');
+                            }
+                        });
+                        
+                        // Toggle current item
+                        answer?.classList.toggle('hidden');
+                        item.querySelector('.faq-icon')?.classList.toggle('rotate-180');
+                    });
+                }
+            });
+
+            // Smooth Scroll for Anchor Links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    const href = this.getAttribute('href');
+                    if (href !== '#' && href.length > 1) {
+                        e.preventDefault();
+                        const target = document.querySelector(href);
+                        if (target) {
+                            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
